@@ -20,3 +20,20 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Auth::routes();
+
+Route::resource('cursos', App\Http\Controllers\UserController::class );
+Route::resource('roles', App\Http\Controllers\RoleController::class );
+Route::resource('users', App\Http\Controllers\UserController::class );
+Route::resource('videos', App\Http\Controllers\VideoController::class );
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
