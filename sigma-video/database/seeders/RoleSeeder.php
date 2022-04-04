@@ -21,16 +21,18 @@ class RoleSeeder extends Seeder
         $role1 = Role::create(['name' => 'Admin']);
         $role2 = Role::create(['name' => 'General']);
 
-        Permission::create(['name' => 'home']);
+        Permission::create(['name' => 'home'])->syncRoles([$role1, $role2]);
 
-        Permission::create(['name' => 'web.cursos.index']);
-        Permission::create(['name' => 'web.cursos.create']);
-        Permission::create(['name' => 'web.cursos.edit']);
-        Permission::create(['name' => 'web.cursos.destroy']);
+        Permission::create(['name' => 'web.cursos.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'web.cursos.create'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'web.cursos.edit'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'web.cursos.destroy'])->syncRoles([$role1, $role2]);
 
-        Permission::create(['name' => 'web.videos.index']);
-        Permission::create(['name' => 'web.videos.create']);
-        Permission::create(['name' => 'web.videos.edit']);
-        Permission::create(['name' => 'web.videos.destroy']);
+        Permission::create(['name' => 'web.videos.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'web.videos.create'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'web.videos.edit'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'web.videos.destroy'])->syncRoles([$role1, $role2]);
+
+
     }
 }
