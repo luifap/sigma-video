@@ -28,8 +28,12 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif
-
+                    <form class="form-inline my-2 my-lg-0 float-right">
+                        <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"value="{{ $buscarpor }}">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
                     <div class="card-body">
+
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead class="thead">

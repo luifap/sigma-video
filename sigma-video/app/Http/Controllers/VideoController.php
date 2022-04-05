@@ -16,9 +16,10 @@ class VideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $videos = Video::paginate();
+        $buscarpor=$request->get('buscarpor');
+        $videos = Video::where('descripcion','like','%'.$buscarpor.'%')->paginate();
 
         return view('video.index', compact('videos'))
             ->with('i', (request()->input('page', 1) - 1) * $videos->perPage());
