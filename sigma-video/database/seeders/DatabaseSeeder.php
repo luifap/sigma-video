@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use App\Models\Curso;
 use App\Models\Video;
 use Illuminate\Database\Seeder;

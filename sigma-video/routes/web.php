@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,11 +26,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Auth::routes();
 
-Route::resource('cursos', App\Http\Controllers\UserController::class )->names('web.cursos');
-Route::resource('users', App\Http\Controllers\UserController::class )->names('web.users');
-Route::resource('videos', App\Http\Controllers\VideoController::class )->names('web.videos');
-Route::resource('cursovideo', App\Http\Controllers\cursoVideoController::class )->names('web.cursovideo');
-Route::resource('videouser', App\Http\Controllers\VideoUserController::class )->names('web.videouser');
+Route::resource('cursos', App\Http\Controllers\CursoController::class );
+Route::resource('users', App\Http\Controllers\UserController::class );
+Route::resource('videos', App\Http\Controllers\VideoController::class );
+Route::resource('cursovideo', App\Http\Controllers\cursoVideoController::class );
+Route::resource('videouser', App\Http\Controllers\VideoUserController::class );
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -38,3 +41,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

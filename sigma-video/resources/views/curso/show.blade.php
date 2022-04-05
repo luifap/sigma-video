@@ -14,7 +14,7 @@
                             <span class="card-title">Vista de Curso</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('cursos.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('cursos.index') }}"> Back</a>
                         </div>
                     </div>
 
@@ -22,11 +22,11 @@
 
                         <div class="form-group">
                             <strong>Nombre del Curso:</strong>
-                            {{ $cursos->name_curso }}
+                            {{ $curso->name }}
                         </div>
                         <div class="form-group">
                             <strong>Campus:</strong>
-                            {{ $cursos->campus }}
+                            {{ $curso->campus }}
                         </div>
                         <div class="form-group">
                             <strong>Programa:</strong>
@@ -34,15 +34,15 @@
                         </div>
                         <div class="form-group">
                             <strong>Sede:</strong>
-                            {{ $cursos->sede }}
+                            {{ $curso->sede }}
                         </div>
                         <div class="form-group">
                             <strong>Modalidad:</strong>
-                            {{ $cursos->modalidad }}
+                            {{ $curso->modalidad }}
                         </div>
                         <div class="form-group">
                             <strong>Grupo:</strong>
-                            {{ $cursos->grupo }}
+                            {{ $curso->grupo }}
                         </div>
                         <div class="form-group">
                             <strong>Fecha Inicio:</strong>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Fecha Fin:</strong>
-                            {{ $cursos->fecha_fin }}
+                            {{ $curso->fecha_fin }}
                         </div>
 
                     </div>

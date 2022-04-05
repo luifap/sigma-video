@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use GuzzleHttp\Promise\Create;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
 
 use Spatie\Permission\Models\Role;
@@ -23,16 +22,14 @@ class RoleSeeder extends Seeder
 
         Permission::create(['name' => 'home'])->syncRoles([$role1, $role2]);
 
-        Permission::create(['name' => 'web.cursos.index'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'web.cursos.create'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'web.cursos.edit'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'web.cursos.destroy'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'curso.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'curso.create'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'curso.edit'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'curso.destroy'])->syncRoles([$role1, $role2]);
 
-        Permission::create(['name' => 'web.videos.index'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'web.videos.create'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'web.videos.edit'])->syncRoles([$role1, $role2]);
-        Permission::create(['name' => 'web.videos.destroy'])->syncRoles([$role1, $role2]);
-
-
+        Permission::create(['name' => 'video.index'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'video.create'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'video.edit'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'video.destroy'])->syncRoles([$role1, $role2]);
     }
 }

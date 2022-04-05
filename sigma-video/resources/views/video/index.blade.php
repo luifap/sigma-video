@@ -34,13 +34,13 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-                                        
-										<th>Name</th>
+                                        <th>Id</th>
+
+										<th>Título del video</th>
 										<th>Link</th>
-										<th>Duracion</th>
-										<th>Fecha Publicacion</th>
-										<th>Tipologia</th>
+										<th>Duración</th>
+										<th>Fecha Publicación</th>
+										<th>Tipología</th>
 										<th>Carpeta Vimeo</th>
 
                                         <th></th>
@@ -50,7 +50,7 @@
                                     @foreach ($videos as $video)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 											<td>{{ $video->name }}</td>
 											<td>{{ $video->link }}</td>
 											<td>{{ $video->duracion }}</td>
