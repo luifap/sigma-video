@@ -28,10 +28,13 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif
-                    <form class="form-inline my-2 my-lg-0 float-right">
-                        <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"value="{{ $buscarpor }}">
-                        <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
+                    <nav class="navbar navbar-light float-right">
+                        <form class="form-inline">
+                            <input name="busqueda" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </form>
+                    </nav>
+
                     <div class="card-body">
 
                         <div class="table-responsive">
@@ -53,8 +56,7 @@
                                 <tbody>
                                     @foreach ($videos as $video)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
-
+                                            <td>{{ $video->id }}</td>
 											<td>{{ $video->name }}</td>
 											<td>{{ $video->link }}</td>
 											<td>{{ $video->duracion }}</td>

@@ -20,17 +20,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::resource('cursos', App\Http\Controllers\CursoController::class );
+    Route::resource('users', App\Http\Controllers\UserController::class );
+    Route::resource('videos', App\Http\Controllers\VideoController::class );
+    Route::resource('cursovideo', App\Http\Controllers\cursoVideoController::class );
+    Route::resource('videouser', App\Http\Controllers\VideoUserController::class );
+    Route::get('/dashboard', function (){
+        return view('dashboard');
+    })->name('dashboard');
+});
 
 Auth::routes();
 
-Route::resource('cursos', App\Http\Controllers\CursoController::class );
-Route::resource('users', App\Http\Controllers\UserController::class );
-Route::resource('videos', App\Http\Controllers\VideoController::class );
-Route::resource('cursovideo', App\Http\Controllers\cursoVideoController::class );
-Route::resource('videouser', App\Http\Controllers\VideoUserController::class );
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

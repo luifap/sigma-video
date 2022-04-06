@@ -37,7 +37,7 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>Name Curso</th>
+										<th>Nombre del Curso</th>
 										<th>Campus</th>
 										<th>Programa</th>
 										<th>Sede</th>

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
-
+    protected $fillable = [''];
     public function videos(){
         return $this->belongsToMany(Video::class,'curso_video');
     }

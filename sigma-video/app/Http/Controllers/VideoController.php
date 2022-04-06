@@ -16,13 +16,14 @@ class VideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index(Request $request)
     {
-        $buscarpor=$request->get('buscarpor');
-        $videos = Video::where('descripcion','like','%'.$buscarpor.'%')->paginate();
+        $nombre = $request->get('busqueda');
+        $videos = Video::where('name','like',"%$nombre%")->paginate(5);
 
-        return view('video.index', compact('videos'))
-            ->with('i', (request()->input('page', 1) - 1) * $videos->perPage());
+        return view('video.index', compact('videos'));
+
     }
 
     /**

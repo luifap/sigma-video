@@ -43,7 +43,7 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Curso::$rules);
+        //request()->validate(Curso::$rules);
 
         $curso = Curso::create($request->all());
 
